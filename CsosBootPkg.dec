@@ -1,0 +1,11 @@
+[Defines]
+  DEC_SPECIFICATION = 0x00010005
+  PACKAGE_NAME      = CsosBootPkg
+  PACKAGE_GUID      = 6A7D5C3B-1F2A-4E8B-9C0D-123456789ABC
+  PACKAGE_VERSION   = 1.0
+
+[Includes]
+  Include
+
+[Guids]
+  gCsosBootSetupFormsetGuid = { 0xC505E001, 0x1A2B, 0x4C8D, { 0x9E, 0x3F, 0xA8, 0xB7, 0xC6, 0xD5, 0xE4, 0xF3 } }

@@ -1,0 +1,47 @@
+[Defines]
+  INF_VERSION    = 0x00010006
+  BASE_NAME      = EfiBoot
+  FILE_GUID      = 7AB3B9B2-1234-4ABC-9C12-123456789ABC
+  MODULE_TYPE    = UEFI_APPLICATION
+  VERSION_STRING = 1.0
+  ENTRY_POINT    = UefiMain
+
+[Sources]
+  Main.c
+  BootGraphics.c
+  BootGraphics.h
+  ElfLoader.c
+  ElfLoader.h
+  SetupUtility.c
+  SetupUtility.h
+  SetupNvData.h
+
+[Packages]
+  MdePkg/MdePkg.dec
+  MdeModulePkg/MdeModulePkg.dec
+  CsosBootPkg/CsosBootPkg.dec
+
+[LibraryClasses]
+  UefiApplicationEntryPoint
+  UefiLib
+  UefiBootServicesTableLib
+  UefiRuntimeServicesTableLib
+  MemoryAllocationLib
+  BaseMemoryLib
+  BaseLib
+  PrintLib
+  DebugLib
+
+[Protocols]
+  gEfiLoadedImageProtocolGuid
+  gEfiSimpleFileSystemProtocolGuid
+  gEfiGraphicsOutputProtocolGuid
+  gEfiEdidActiveProtocolGuid
+  gEfiEdidDiscoveredProtocolGuid
+  gEfiHiiFontProtocolGuid
+  gEfiSimpleTextInProtocolGuid
+
+[Guids]
+  gEfiAcpiTableGuid
+  gEfiAcpi10TableGuid
+  gCsosBootSetupFormsetGuid
